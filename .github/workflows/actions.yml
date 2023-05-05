@@ -15,7 +15,7 @@ jobs:
       - name: docker push
         run: docker push mariyasv/skypro_msvintsova_app:$GITHUB_REF_NAME_$GITHUB_RUN_ID
   deploy:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: clone code
         uses: actions/checkout@v2
