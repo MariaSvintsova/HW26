@@ -41,11 +41,11 @@ jobs:
       - name: deploy app
         uses: appleboy/scp-action@v0.1.4
         with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        script: |
-          cd flask_app_ci
-          docker-compose up -d
-          echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd flask_app_ci
+            docker-compose up -d
+            echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d
 
