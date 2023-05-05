@@ -26,6 +26,7 @@ def index():
     response = {
         "total": len(users),
         "users": [{"username": user.username} for user in users],
+        "life-credo": "do skypro and you will be happy:)"
     }
     return jsonify(response)
 
