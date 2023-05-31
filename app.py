@@ -30,7 +30,7 @@ def index():
     }
     return jsonify(response)
 
-
+#
 @app.route("/api/register", methods=["POST"])
 def register():
     user_data = request.json
